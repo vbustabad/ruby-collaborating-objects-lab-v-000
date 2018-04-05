@@ -18,6 +18,8 @@ class Song
     song_array = file_name.split(" - ")
     new_song = Song.new(song_array[1])
     new_song.artist = Artist.find_or_create_by_name(song_array[0])
+    binding.pry
+    # .add_song(new_song)
     new_song
   end
 
