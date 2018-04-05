@@ -7,9 +7,13 @@ class MP3Importer
   end
 
   def files
-    file_array = Dir.glob("#{path}/*.mp3").collect do |file|
+    Dir.glob("#{path}/*.mp3").collect do |file|
       file_name = file.split("/")[4]
     end
+  end
+
+  def file_array
+    files
   end
 
   def import
