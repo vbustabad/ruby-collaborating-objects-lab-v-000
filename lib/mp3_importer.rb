@@ -1,6 +1,6 @@
 class MP3Importer
 
-  attr_accessor :path, :file_array
+  attr_accessor :path
 
   def initialize(path)
     @path = path
@@ -12,12 +12,8 @@ class MP3Importer
     end
   end
 
-  def file_array
-    files
-  end
-
   def import
-    self.file_array.each do |file|
+    self.files.each do |file|
       Song.new_by_filename(file)
     end
   end
