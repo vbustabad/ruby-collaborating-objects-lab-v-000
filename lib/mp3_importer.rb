@@ -10,6 +10,7 @@ class MP3Importer
     Dir.glob("#{path}/*.mp3").collect do |file|
       file_name = file.split("/")[4]
     end
+    binding.pry
   end
 
   def import
